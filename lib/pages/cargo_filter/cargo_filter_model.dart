@@ -14,22 +14,22 @@ class CargoFilterModel extends FlutterFlowModel<CargoFilterWidget> {
 
   final unfocusNode = FocusNode();
   // State field(s) for DropDown widget.
-  String? dropDownValue1;
+  List<String>? dropDownValue1;
   FormFieldController<String>? dropDownValueController1;
   // State field(s) for DropDown widget.
   String? dropDownValue2;
   FormFieldController<String>? dropDownValueController2;
   // State field(s) for DropDown widget.
-  String? dropDownValue3;
+  List<String>? dropDownValue3;
   FormFieldController<String>? dropDownValueController3;
   // State field(s) for DropDown widget.
-  String? dropDownValue4;
+  List<String>? dropDownValue4;
   FormFieldController<String>? dropDownValueController4;
   // State field(s) for DropDown widget.
-  String? dropDownValue5;
+  List<String>? dropDownValue5;
   FormFieldController<String>? dropDownValueController5;
   // State field(s) for DropDown widget.
-  String? dropDownValue6;
+  List<String>? dropDownValue6;
   FormFieldController<String>? dropDownValueController6;
 
   /// Initialization and disposal methods.

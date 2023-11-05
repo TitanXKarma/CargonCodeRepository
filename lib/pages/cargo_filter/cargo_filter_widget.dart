@@ -125,19 +125,26 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                   20.0, 45.0, 20.0, 0.0),
                               child: FlutterFlowDropDown<String>(
                                 controller: _model.dropDownValueController1 ??=
-                                    FormFieldController<String>(null),
+                                    FormFieldController<String>(
+                                  _model.dropDownValue1 ??=
+                                      'Dry/Ambient/Chilled/Frozen',
+                                ),
                                 options: [
                                   'Dry',
                                   'Ambient',
                                   'Chilled',
                                   'Frozen'
                                 ],
-                                onChanged: (val) =>
-                                    setState(() => _model.dropDownValue1 = val),
+                                onChanged: null,
                                 width: 300.0,
                                 height: 50.0,
-                                textStyle:
-                                    FlutterFlowTheme.of(context).bodyMedium,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: FlutterFlowTheme.of(context)
+                                          .lineColor3,
+                                    ),
                                 hintText: 'Please select...',
                                 icon: Icon(
                                   Icons.keyboard_arrow_down_rounded,
@@ -156,7 +163,9 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                     16.0, 4.0, 16.0, 4.0),
                                 hidesUnderline: true,
                                 isSearchable: false,
-                                isMultiSelect: false,
+                                isMultiSelect: true,
+                                onChangedForMultiSelect: (val) =>
+                                    setState(() => _model.dropDownValue1 = val),
                               ),
                             ),
                           ],
@@ -261,15 +270,17 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                   child: FlutterFlowDropDown<String>(
                                     controller:
                                         _model.dropDownValueController3 ??=
-                                            FormFieldController<String>(null),
+                                            FormFieldController<String>(
+                                      _model.dropDownValue3 ??=
+                                          'Food/Non-food/Pharma/Chemical',
+                                    ),
                                     options: [
                                       'Food',
                                       'Non-food',
                                       'Pharma',
                                       'Chemical'
                                     ],
-                                    onChanged: (val) => setState(
-                                        () => _model.dropDownValue3 = val),
+                                    onChanged: null,
                                     width: 300.0,
                                     height: 50.0,
                                     textStyle:
@@ -292,7 +303,9 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                         16.0, 4.0, 16.0, 4.0),
                                     hidesUnderline: true,
                                     isSearchable: false,
-                                    isMultiSelect: false,
+                                    isMultiSelect: true,
+                                    onChangedForMultiSelect: (val) => setState(
+                                        () => _model.dropDownValue3 = val),
                                   ),
                                 ),
                               ],
@@ -342,7 +355,10 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                   child: FlutterFlowDropDown<String>(
                                     controller:
                                         _model.dropDownValueController4 ??=
-                                            FormFieldController<String>(null),
+                                            FormFieldController<String>(
+                                      _model.dropDownValue4 ??=
+                                          '1 Ton/3 Ton/4 Ton/7 Ton/10 Ton/ Trailer',
+                                    ),
                                     options: [
                                       '1 Ton',
                                       '3 Ton',
@@ -351,8 +367,7 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                       '10 Ton',
                                       'Trailer'
                                     ],
-                                    onChanged: (val) => setState(
-                                        () => _model.dropDownValue4 = val),
+                                    onChanged: null,
                                     width: 300.0,
                                     height: 50.0,
                                     textStyle:
@@ -375,7 +390,9 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                         16.0, 4.0, 16.0, 4.0),
                                     hidesUnderline: true,
                                     isSearchable: false,
-                                    isMultiSelect: false,
+                                    isMultiSelect: true,
+                                    onChangedForMultiSelect: (val) => setState(
+                                        () => _model.dropDownValue4 = val),
                                   ),
                                 ),
                               ],
@@ -460,9 +477,8 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                     '11:00',
                                     '12:00'
                                   ],
-                                  onChanged: (val) => setState(
-                                      () => _model.dropDownValue5 = val),
-                                  width: 119.0,
+                                  onChanged: null,
+                                  width: 129.0,
                                   height: 50.0,
                                   textStyle:
                                       FlutterFlowTheme.of(context).bodyMedium,
@@ -484,11 +500,13 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                       16.0, 4.0, 16.0, 4.0),
                                   hidesUnderline: true,
                                   isSearchable: false,
-                                  isMultiSelect: false,
+                                  isMultiSelect: true,
+                                  onChangedForMultiSelect: (val) => setState(
+                                      () => _model.dropDownValue5 = val),
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.57, 0.58),
+                                alignment: AlignmentDirectional(0.92, 0.58),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 30.0, 0.0),
@@ -497,9 +515,8 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                         _model.dropDownValueController6 ??=
                                             FormFieldController<String>(null),
                                     options: ['AM', 'PM'],
-                                    onChanged: (val) => setState(
-                                        () => _model.dropDownValue6 = val),
-                                    width: 110.0,
+                                    onChanged: null,
+                                    width: 136.0,
                                     height: 50.0,
                                     textStyle:
                                         FlutterFlowTheme.of(context).bodyMedium,
@@ -521,7 +538,9 @@ class _CargoFilterWidgetState extends State<CargoFilterWidget> {
                                         16.0, 4.0, 16.0, 4.0),
                                     hidesUnderline: true,
                                     isSearchable: false,
-                                    isMultiSelect: false,
+                                    isMultiSelect: true,
+                                    onChangedForMultiSelect: (val) => setState(
+                                        () => _model.dropDownValue6 = val),
                                   ),
                                 ),
                               ),
